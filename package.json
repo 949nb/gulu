@@ -6,8 +6,8 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "dev-test": "parcel watch test/* --no-cache & karma start",
-    "test": "parcel build test/* --no-minify && karma start --single-run"
+    "dev-test": "vue-vli-service watch test/* --no-cache & karma start",
+    "test": "vue-cli-service build test/* --no-minify && karma start --single-run"
   },
   "dependencies": {
     "chai": "^4.2.0",

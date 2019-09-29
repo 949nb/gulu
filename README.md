@@ -2,6 +2,7 @@
 
 + 这是一个基于vue的UI框架
 
+> 这里的单元测试还没成功
 ## Project setup
 ```
 yarn install

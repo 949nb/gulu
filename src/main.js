@@ -15,16 +15,3 @@ new Vue({
   store,
   render: h => h(App),
 }).$mount('#app');
-
-{
-  const Cons = Vue.extend(Button);
-  const vm = new Cons({
-    porpsData: {
-      colorType: 'success',
-      iconType: 'setting',
-    },
-  });
-  vm.$mount();
-  const button = vm.$el.querySelector('BUTTON');
-  console.dir(button);
-}
