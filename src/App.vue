@@ -1,0 +1,27 @@
+<template>
+  <div id="app">
+    <g-button icon-type="setting"> 按钮 </g-button>
+    <g-button color-type='success' icon-type="download"> 下载 </g-button>
+    <g-button icon-position="right" icon-type="good" colorType='danger'> 点赞 </g-button>
+    <g-button icon-position='right' icon-type='right' :loading='true'> 向右 </g-button>
+    <g-button :loading="true"></g-button>
+    <g-button colorType='warning' icon-type="loading">有状态的按钮</g-button>
+  </div>
+</template>
+
+<script>
+
+export default {
+  data() {
+    return {
+
+    };
+  },
+};
+</script>
+
+<style lang="scss" scope>
+  .g-button {
+    margin: 5px;
+  }
+</style>
