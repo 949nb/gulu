@@ -1,5 +1,24 @@
 <template>
   <div id="app">
+    <g-row>
+      <g-col :span="12"></g-col>
+      <g-col :span="12"></g-col>
+    </g-row>
+    <g-row>
+      <g-col :span="1"></g-col>
+      <g-col :span="21" :offset="2"></g-col>
+    </g-row>
+     <g-row>
+      <g-col :span="6"></g-col>
+      <g-col :span="6"></g-col>
+      <g-col :span="6"></g-col>
+      <g-col :span="6"></g-col>
+    </g-row>
+    <g-row>
+      <g-col :span="8"></g-col>
+      <g-col :span="8"></g-col>
+      <g-col :span="8"></g-col>
+    </g-row>
     <g-input value="张三"></g-input>
     <g-input value="王麻子" disabled></g-input>
     <g-input value="李四" error="姓名不能少于两个字"></g-input>
