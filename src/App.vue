@@ -3,6 +3,10 @@
     <g-input value="张三"></g-input>
     <g-input value="王麻子" disabled></g-input>
     <g-input value="李四" error="姓名不能少于两个字"></g-input>
+    <div>
+      <g-input v-model="value"></g-input>
+      <p><span>{{ value }}</span></p>
+    </div>
     <br>
     <div style="margin: 20px;">
       <g-button icon-type="setting"> 按钮 </g-button>
@@ -20,7 +24,7 @@
 export default {
   data() {
     return {
-
+      value: 1,
     };
   },
 };
