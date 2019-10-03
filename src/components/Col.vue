@@ -1,6 +1,8 @@
 <template>
-  <div :class="cloClass">
-    <slot></slot>
+  <div :class="cloClass" :style="{padding: `0px ${gutton / 2}px`}">
+    <div style="border: 1px solid green;height: 50px">
+      <slot></slot>
+    </div>
   </div>
 </template>
 
@@ -21,6 +23,7 @@ export default {
         [`col-${this.span}`]: this.span,
         [`offset-${this.offset}`]: this.offset,
       },
+      gutton: 0,
     };
   },
 };
@@ -29,7 +32,6 @@ export default {
 <style lang="scss">
   $class: col-;
   .col{
-    border: 1px solid red;
     width: 50%;
     height: 100px;
     @for $i from 1 through 24 {
