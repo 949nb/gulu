@@ -20,8 +20,8 @@ export default {
   data() {
     return {
       rowStyle: {
-        marginLeft: `-${this.gutton / 2}px`,
-        marginRight: `-${this.gutton / 2}px`,
+        marginLeft: `-${this.gutton}px`,
+        marginRight: `-${this.gutton}px`,
       },
     };
   },

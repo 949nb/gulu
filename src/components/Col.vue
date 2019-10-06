@@ -1,5 +1,5 @@
 <template>
-  <div :class="cloClass" :style="{padding: `0px ${gutton / 2}px`}">
+  <div :class="cloClass" :style="{padding: `0px ${gutton}px`}">
     <div style="border: 1px solid green;height: 50px">
       <slot></slot>
     </div>

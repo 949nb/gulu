@@ -20,7 +20,7 @@
         <g-col :span="8"></g-col>
         <g-col :span="8"></g-col>
       </g-row> -->
-      <g-row :gutton='20'>
+      <g-row :gutton='10'>
         <g-col :span="12"></g-col>
         <g-col :span="12"></g-col>
       </g-row>
