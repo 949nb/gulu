@@ -1,25 +1,6 @@
 <template>
   <div id="app">
     <div style="border: 1px solid black">
-      <!-- <g-row :gutton="20">
-        <g-col :span="10"></g-col>
-        <g-col :span="12" :offset='2'></g-col>
-      </g-row>
-      <g-row>
-        <g-col :span="1"></g-col>
-        <g-col :span="21" :offset="2"></g-col>
-      </g-row>
-      <g-row>
-        <g-col :span="6"></g-col>
-        <g-col :span="6"></g-col>
-        <g-col :span="6"></g-col>
-        <g-col :span="6"></g-col>
-      </g-row>
-      <g-row>
-        <g-col :span="8"></g-col>
-        <g-col :span="8"></g-col>
-        <g-col :span="8"></g-col>
-      </g-row> -->
       <g-row :gutton='10'>
         <g-col :span="12"></g-col>
         <g-col :span="12"></g-col>
