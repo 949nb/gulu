@@ -1,12 +1,12 @@
 <template>
   <div id="app">
-    <div style="border: 1px solid black">
-      <g-row :gutton='10'>
-        <g-col :span="12"></g-col>
-        <g-col :span="12"></g-col>
-      </g-row>
-    </div>
-    <g-input value="张三"></g-input>
+    <g-layout class="wrap">
+      <g-header></g-header>
+      <g-content></g-content>
+      <g-footer></g-footer>
+    </g-layout>
+
+    <!-- <g-input value="张三"></g-input>
     <g-input value="王麻子" disabled></g-input>
     <g-input value="李四" error="姓名不能少于两个字"></g-input>
     <div>
@@ -21,7 +21,7 @@
       <g-button icon-position='right' icon-type='right' :loading='true'> 向右 </g-button>
       <g-button :loading="true"></g-button>
       <g-button colorType='warning' icon-type="loading">有状态的按钮</g-button>
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -39,5 +39,8 @@ export default {
 <style lang="scss" scope>
   .g-button {
     margin: 5px;
+  }
+  .wrap {
+    border: 1px solid black;
   }
 </style>
