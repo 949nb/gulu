@@ -18,16 +18,10 @@ export default {
     iconType: {
       type: String,
       default: '',
-      // validator(value) {
-      //   return ['setting', 'download', 'left', 'right', 'good'].indexOf(value) !== -1;
-      // },
     },
     colorType: {
       type: String,
       default: '',
-      // validator(value) {
-      //   return ['success', 'warning', 'danger'].indexOf(value) !== -1;
-      // },
     },
     iconPosition: {
       type: String,
