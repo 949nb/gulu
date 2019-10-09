@@ -5,5 +5,7 @@
 </template>
 
 <style lang="scss">
-
+  .header {
+    height: 100px;
+  }
 </style>

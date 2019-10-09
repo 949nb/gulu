@@ -1,13 +1,25 @@
 <template>
-  <div class="layout">
+  <div class="layout" :class="{['hasSider']: hasSider}">
     <slot></slot>
   </div>
 </template>
 
 <script>
 export default {
+  name: 'g-layout',
+  data() {
+    return {
+      hasSider: false,
+    };
+  },
   mounted() {
-    console.log(this.$el.children);
+    this.$children.forEach((vm) => {
+      // eslint-disable-next-line no-console
+      console.log(vm.$options.name);
+      if (vm.$options.name === 'Sider') {
+        this.hasSider = true;
+      }
+    });
   },
 };
 </script>
@@ -16,6 +28,9 @@ export default {
     display: flex;
     flex-direction: column;
     height: 100vh;
+    &.hasSider {
+      flex-direction: row;
+    }
   }
 
 </style>

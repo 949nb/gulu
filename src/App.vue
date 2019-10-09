@@ -1,9 +1,20 @@
 <template>
   <div id="app">
     <g-layout class="wrap">
-      <g-header></g-header>
-      <g-content></g-content>
-      <g-footer></g-footer>
+      <g-header class="demo">
+        <h1>header</h1>
+      </g-header>
+      <g-layout>
+        <g-sider class="demo">
+          <h1>Sider</h1>
+        </g-sider>
+        <g-content class="demo">
+          <h1>content</h1>
+        </g-content>
+      </g-layout>
+      <g-footer class="demo">
+        <h1>footer</h1>
+      </g-footer>
     </g-layout>
 
     <!-- <g-input value="张三"></g-input>
@@ -41,6 +52,12 @@ export default {
     margin: 5px;
   }
   .wrap {
-    border: 1px solid black;
-  }
+    border: 10px solid black;
+    & > .demo {
+      border: 2px solid black;
+    }
+  .demo {
+      border: 2px solid black;
+    }
+}
 </style>
