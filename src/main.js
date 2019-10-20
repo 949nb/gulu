@@ -12,7 +12,6 @@ import Footer from './components/Footer.vue';
 import Sider from './components/Sider.vue';
 import Layout from './components/Layout.vue';
 import Content from './components/Content.vue';
-import Toast from './components/toast.vue';
 
 Vue.config.productionTip = false;
 Vue.component('g-icon', Icon);
@@ -25,8 +24,6 @@ Vue.component('g-footer', Footer);
 Vue.component('g-sider', Sider);
 Vue.component('g-layout', Layout);
 Vue.component('g-content', Content);
-Vue.component('g-Toast', Toast);
-
 
 new Vue({
   router,
