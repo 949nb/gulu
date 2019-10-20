@@ -1,6 +1,6 @@
 <template>
   <div :class="cloClass" :style="{padding: `0px ${gutton}px`}">
-    <div style="border: 1px solid green;height: 50px">
+    <div>
       <slot></slot>
     </div>
   </div>
