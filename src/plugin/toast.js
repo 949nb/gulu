@@ -7,6 +7,7 @@ export default {
       console.log('this is toast');
       // Vue.extend(xx)就是构造一个xx的constructor(构造函数)，这个xx可以是一个Vue实例
       const toastConstructor = Vue.extend(Toast);
+      // eslint-disable-next-line new-cap
       const toast = new toastConstructor();
       // 上面两句代码 就是构造了一个Toast组件的新的实例
       toast.$slots.default = text;
