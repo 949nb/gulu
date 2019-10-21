@@ -1,11 +1,30 @@
 <template>
-  <div class="toast">
-    <slot></slot>
-  </div>
+    <div class="toast">
+      <slot></slot>
+    </div>
 </template>
 
 <script>
 export default {
+  props: {
+    autoClose: {
+      type: Boolean,
+      default: true,
+    },
+  },
+  mounted() {
+    if (this.autoClose) {
+      setTimeout(() => {
+        this.close();
+      }, 2000);
+    }
+  },
+  methods: {
+    close() {
+      this.$el.remove();
+      this.$destroy();
+    },
+  },
 };
 </script>
 
