@@ -5,33 +5,40 @@
         <span class='title'>游乐场</span>
       </g-col>
     </g-row>
-    <button @click="createdMessage">点我</button>
+    <button class="btn" @click="createdMessage">点我</button>
   </div>
 </template>
 
 <script>
-import createMessage from './components/message';
-
 export default {
   data() {
     return {
       value: null,
+      n: 0,
     };
   },
   methods: {
     createdMessage() {
-      console.log(12);
-      createMessage({
-        props: {
-          text: '这是一个弹窗',
-        },
-      });
+      console.log(this.n++);
+      this.$toast('asdfasdf');
     },
   },
 };
 </script>
 
 <style lang="scss" scope>
+  .btn{
+    height: 30px;
+    width: 70px;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  .btn:focus{
+    outline: none;
+  }
+  .btn:hover{
+    background-color: #D8D8D8;
+  }
   .title{
     height: 100px;
     line-height: 100px;

@@ -12,6 +12,9 @@ import Footer from './components/Footer.vue';
 import Sider from './components/Sider.vue';
 import Layout from './components/Layout.vue';
 import Content from './components/Content.vue';
+import toastPlugin from './plugin/toast';
+
+Vue.use(toastPlugin);
 
 Vue.config.productionTip = false;
 Vue.component('g-icon', Icon);
