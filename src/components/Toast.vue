@@ -1,6 +1,7 @@
 <template>
     <div class="toast">
       <slot></slot>
+      <span v-if="closeButton" class="toastCloseButton">| {{closeButton.text}}</span>
     </div>
 </template>
 
@@ -9,7 +10,18 @@ export default {
   props: {
     autoClose: {
       type: Boolean,
-      default: true,
+      default: false,
+    },
+    closeButton: {
+      type: Object,
+      default() {
+        return {
+          text: '关闭',
+          callback: (toast) => {
+            toast.close();
+          },
+        };
+      },
     },
   },
   mounted() {
@@ -28,7 +40,7 @@ export default {
 };
 </script>
 
-<style lang="css">
+<style lang="scss">
   .toast {
     height: 30px;
     margin-bottom: 10px;
@@ -44,6 +56,10 @@ export default {
     top: 10px;
     left: 50%;
     transform: translateX(-50%);
-    box-shadow: 0px 0px 3px 0px grey;
+    box-shadow: 0 0 3px 0 grey;
+    font-size: 12px;
+    & > .toastCloseButton {
+      cursor: pointer;
+    }
   }
 </style>

@@ -19,8 +19,9 @@ export default {
   },
   methods: {
     createdMessage() {
-      console.log(this.n++);
-      this.$toast('asdfasdf');
+      this.$toast('asdfasdf ', {
+        text: '关了',
+      });
     },
   },
 };
