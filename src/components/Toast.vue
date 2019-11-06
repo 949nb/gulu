@@ -59,6 +59,7 @@ export default {
   methods: {
     close() {
       this.$el.remove();
+      this.$emit('close')
       this.$destroy();
     },
     closeButtonClick() {
@@ -82,7 +83,7 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: .5s;
+    transition: .3s;
     position: fixed;
     left: 50%;
     box-shadow: 0 0 3px 0 grey;
@@ -95,15 +96,18 @@ export default {
     }
     &.position-top{
       top: 10px;
-      transform: translateX(-50%)
+      transform: translateX(-50%);
+      animation: .3s fade-top linear;
     }
     &.position-bottom {
       bottom: 10px;
-      transform: translateX(-50%)
+      transform: translateX(-50%);
+      animation: .3s fade-bottom linear;
     }
     &.position-middle {
       top: 50%;
       transform: translate(-50%, -50%);
+      animation: .3s fade-middle linear;
     }
   }
   .line {
@@ -111,10 +115,16 @@ export default {
     height: 100%;
     margin-left: 16px;
   }
-  .position-top{
+  @keyframes fade-top{
+    0% {top: 0; opacity: 0;}
+    100% {top: 10px; opacity: 1;}
   }
-  .position-middle{
+  @keyframes fade-middle{
+    0% {top: 48%; opacity: 0;}
+    100% {top: 50%; opacity: 1;}
   }
-  .position-bottom{
+  @keyframes fade-bottom{
+    0% {bottom: -10px; opacity: 0;}
+    100% {bottom: 10px; opacity: 1;}
   }
 </style>

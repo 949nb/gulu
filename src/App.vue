@@ -28,7 +28,7 @@ export default {
         },
         autoClose: true,
         isHTML: true,
-        position: 'middle',
+        position: 'bottom',
       });
     },
   },
