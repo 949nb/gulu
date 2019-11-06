@@ -5,7 +5,6 @@
         <span class='title'>游乐场</span>
       </g-col>
     </g-row>
-    <g-button @click="createdMessage" ></g-button>
     <button class="btn" @click="createdMessage">点我</button>
   </div>
 </template>
@@ -27,8 +26,9 @@ export default {
             console.log('关闭后，干什么什么事情');
           },
         },
-        autoClose: true,
+        autoClose: false,
         isHTML: true,
+        position: 'middle',
       });
     },
   },

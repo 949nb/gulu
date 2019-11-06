@@ -1,5 +1,5 @@
 <template>
-    <div class="toast" ref="wrapper">
+    <div :class="toastClass" class="toast" ref="wrapper">
       <slot v-if="!isHTML"></slot>
       <div v-else v-html="$slots.default[0]" style="max-width: 150px"></div>
       <span class="line" ref="line"></span>
@@ -33,6 +33,13 @@ export default {
       type: Boolean,
       default: false,
     },
+    position: {
+      type: String,
+      default: 'top',
+      validator(value) {
+        return ['top', 'middle', 'bottom'].indexOf(value) >= 0
+      },
+    },
   },
   mounted() {
     this.$nextTick(() => {
@@ -43,6 +50,11 @@ export default {
         this.close();
       }, 2000);
     }
+  },
+  computed: {
+    toastClass() {
+      return `position-${this.position}`;
+    },
   },
   methods: {
     close() {
@@ -72,9 +84,7 @@ export default {
     align-items: center;
     transition: .5s;
     position: fixed;
-    top: 10px;
     left: 50%;
-    transform: translateX(-50%);
     box-shadow: 0 0 3px 0 grey;
     font-size: 12px;
     padding: 0 16px;
@@ -83,10 +93,28 @@ export default {
       margin-left: 16px;
       flex-shrink: 0;
     }
+    &.position-top{
+      top: 10px;
+      transform: translateX(-50%)
+    }
+    &.position-bottom {
+      bottom: 10px;
+      transform: translateX(-50%)
+    }
+    &.position-middle {
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
   }
   .line {
     border-left: 1px solid white;
     height: 100%;
     margin-left: 16px;
+  }
+  .position-top{
+  }
+  .position-middle{
+  }
+  .position-bottom{
   }
 </style>

@@ -27,7 +27,7 @@ export default {
       type: String,
       default: 'left',
       // validator(value) {
-      //   return ['left', 'right'].indexOf(value) !== -1;
+      //   return ['left', 'right'].indexOf(value) >= 0;
       // },
     },
     loading: {
