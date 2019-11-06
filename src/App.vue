@@ -19,14 +19,14 @@ export default {
   },
   methods: {
     createdMessage() {
-      this.$toast('很长很长的文y字很长很长的文y字很长很长的文y字很长很长的文y字很长很长的文y字很长很长的文y字很长很长的文y字', {
+      this.$toast(`你的智商目前为${parseInt(Math.random() * 100)}。`, {
         closeButton: {
-          text: '关闭',
+          text: '我知道了',
           callback: () => {
             console.log('关闭后，干什么什么事情');
           },
         },
-        autoClose: false,
+        autoClose: true,
         isHTML: true,
         position: 'middle',
       });
