@@ -5,6 +5,7 @@
         <span class='title'>游乐场</span>
       </g-col>
     </g-row>
+    <g-button @click="createdMessage" ></g-button>
     <button class="btn" @click="createdMessage">点我</button>
   </div>
 </template>
@@ -19,8 +20,15 @@ export default {
   },
   methods: {
     createdMessage() {
-      this.$toast('asdfasdf ', {
-        text: '关了',
+      this.$toast('很长很长的文y字很长很长的文y字很长很长的文y字很长很长的文y字很长很长的文y字很长很长的文y字很长很长的文y字', {
+        closeButton: {
+          text: '关闭',
+          callback: () => {
+            console.log('关闭后，干什么什么事情');
+          },
+        },
+        autoClose: true,
+        isHTML: true,
       });
     },
   },
