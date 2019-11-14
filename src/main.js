@@ -13,10 +13,20 @@ import Sider from './components/Sider.vue';
 import Layout from './components/Layout.vue';
 import Content from './components/Content.vue';
 import toastPlugin from './plugin/toast';
+import Tab from './components/tab/tab.vue';
+import TabContent from './components/tab/tabContent.vue';
+import TabItem from './components/tab/tabItem.vue';
+import TabNav from './components/tab/tabNav.vue';
+import TabPane from './components/tab/tabPane.vue';
 
 Vue.use(toastPlugin);
 
 Vue.config.productionTip = false;
+Vue.component('g-tab', Tab);
+Vue.component('g-tab-nav', TabNav);
+Vue.component('g-tab-item', TabItem);
+Vue.component('g-tab-content', TabContent);
+Vue.component('g-tab-pane', TabPane);
 Vue.component('g-icon', Icon);
 Vue.component('g-button', Button);
 Vue.component('g-input', Input);

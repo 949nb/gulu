@@ -1,13 +1,13 @@
 <template>
   <div>
-
+    <slot></slot>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'TabPane'
-}
+  name: 'TabPane',
+};
 </script>
 
 <style>

@@ -6,6 +6,32 @@
       </g-col>
     </g-row>
     <button class="btn" @click="createdMessage">点我</button>
+
+
+    <g-tab selected.sync="first">
+      <g-tab-nav>
+        <g-tab-item name="first">
+          第一项
+        </g-tab-item>
+        <g-tab-item name='second'>
+          <g-icon iconType='good'></g-icon>第二项
+        </g-tab-item>
+         <g-tab-item name='third' disabled>
+          第三项
+        </g-tab-item>
+      </g-tab-nav>
+      <g-tab-content>
+        <g-tab-pane name='firstInfo'>
+          这是第一项的内容
+        </g-tab-pane>
+        <g-tab-pane name='secondInfo'>
+          这是第二项的内容
+        </g-tab-pane>
+        <g-tab-pane name='thirdInfo'>
+          这是第三项的内容
+        </g-tab-pane>
+      </g-tab-content>
+    </g-tab>
   </div>
 </template>
 
