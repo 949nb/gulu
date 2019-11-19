@@ -21,13 +21,13 @@
         </g-tab-item>
       </g-tab-nav>
       <g-tab-content>
-        <g-tab-pane name='firstInfo'>
+        <g-tab-pane name='first'>
           这是第一项的内容
         </g-tab-pane>
-        <g-tab-pane name='secondInfo'>
+        <g-tab-pane name='second'>
           这是第二项的内容
         </g-tab-pane>
-        <g-tab-pane name='thirdInfo'>
+        <g-tab-pane name='third'>
           这是第三项的内容
         </g-tab-pane>
       </g-tab-content>

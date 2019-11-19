@@ -20,7 +20,7 @@ export default {
   inject: ['eventBus'],
   mounted() {
     this.eventBus.$on('update:selected', (name) => {
-      console.log(name);
+      console.log('tab传过来的selected', name);
     });
   },
   methods: {
@@ -28,6 +28,9 @@ export default {
       this.eventBus.$emit('update:selected', this.name);
     },
   },
+  computed: {
+    
+  }
 };
 </script>
 
