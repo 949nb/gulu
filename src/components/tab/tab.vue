@@ -12,7 +12,7 @@ export default {
   props: {
     selected: {
       type: String,
-      default: 'first',
+      required: true,
     },
   },
   data() {
@@ -25,18 +25,11 @@ export default {
       eventBus: this.eventBus,
     };
   },
-  created() {
-    this.eventBus.$emit('updata:selected', this.selected);
-  },
-  computed: {
-    selectedName: {
-      get() {
-        return this.selected;
-      },
-      set(newVal) {
-        return newVal;
-      },
-    },
+  mounted() {
+    console.log(this.selected);
+    const a = this.selected;
+    this.eventBus.$emit('update:selected', a);
+    console.log(1);
   },
 };
 </script>

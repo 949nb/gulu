@@ -8,7 +8,7 @@
     <button class="btn" @click="createdMessage">点我</button>
 
 
-    <g-tab selected.sync="first">
+    <g-tab :selected.sync="selectedTab">
       <g-tab-nav>
         <g-tab-item name="first">
           第一项
@@ -41,6 +41,7 @@ export default {
     return {
       value: null,
       n: 0,
+      selectedTab: 'second',
     };
   },
   methods: {
