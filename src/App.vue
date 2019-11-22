@@ -1,4 +1,4 @@
-<template>
+<template xmlns:v-slot="http://www.w3.org/1999/XSL/Transform">
   <div id="app">
     <g-row>
       <g-col :span='24' style="height: 100px; border: 1px solid grey;text-align: center;">
@@ -7,32 +7,13 @@
     </g-row>
     <button class="btn" @click="createdMessage">点我</button>
 
-
-    <g-tab :selected.sync="selectedTab">
-      <g-tab-nav>
-        <g-tab-item name="first">
-          第一项
-        </g-tab-item>
-        <g-tab-item name='second'>
-          <g-icon iconType='good'></g-icon>第二项
-        </g-tab-item>
-         <g-tab-item name='third' disabled>
-          第三项
-        </g-tab-item>
-      </g-tab-nav>
-      <g-tab-content>
-        <g-tab-pane name='first'>
-          这是第一项的内容
-        </g-tab-pane>
-        <g-tab-pane name='second'>
-          这是第二项的内容
-        </g-tab-pane>
-        <g-tab-pane name='third'>
-          这是第三项的内容
-        </g-tab-pane>
-      </g-tab-content>
-    </g-tab>
-  </div>
+    <g-popover>
+      <span>这是一段popover中的话</span>
+      <template v-slot:popoverBtn>
+        <button>popover</button>
+      </template>
+    </g-popover>
+ </div>
 </template>
 
 <script>
