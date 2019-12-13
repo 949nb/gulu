@@ -37,7 +37,7 @@ export default {
       type: String,
       default: 'top',
       validator(value) {
-        return ['top', 'middle', 'bottom'].indexOf(value) >= 0
+        return ['top', 'middle', 'bottom'].indexOf(value) >= 0;
       },
     },
   },
@@ -59,7 +59,7 @@ export default {
   methods: {
     close() {
       this.$el.remove();
-      this.$emit('close')
+      this.$emit('close');
       this.$destroy();
     },
     closeButtonClick() {

@@ -1,19 +1,20 @@
-<template xmlns:v-slot="http://www.w3.org/1999/XSL/Transform">
+<template>
   <div id="app">
     <g-row>
       <g-col :span='24' style="height: 100px; border: 1px solid grey;text-align: center;">
-        <span class='title'>游乐场</span>
+        <span class='title'>sssss</span>
       </g-col>
     </g-row>
-    <button class="btn" @click="createdMessage">点我</button>
-
-    <g-popover>
-      <span>这是一段popover中的话</span>
-      <template v-slot:popoverBtn>
-        <button>popover</button>
-      </template>
-    </g-popover>
- </div>
+    <g-button class="btn" @click.native="createdMessage">点我</g-button>
+    <div style="margin: 100px;">
+      <g-popover>
+        <template v-slot:content>
+          <span>这是一段popover中的话</span>
+        </template>
+          <g-button>我是popover</g-button>
+      </g-popover>
+    </div>
+</div>
 </template>
 
 <script>
@@ -27,6 +28,7 @@ export default {
   },
   methods: {
     createdMessage() {
+      // eslint-disable-next-line radix
       this.$toast(`你的智商目前为${parseInt(Math.random() * 100)}。`, {
         closeButton: {
           text: '我知道了',
@@ -62,9 +64,6 @@ export default {
     text-align: center;
     font-size: 60px;
     color: grey;
-  }
-  .g-button {
-    margin: 5px;
   }
   .wrap {
     border: 10px solid black;

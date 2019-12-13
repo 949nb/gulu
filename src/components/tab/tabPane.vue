@@ -29,7 +29,6 @@ export default {
   },
   created() {
     this.eventBus.$on('update:selected', (name) => {
-      console.log(name, 'pane')
       this.active = name === this.name;
     });
   },

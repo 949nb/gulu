@@ -26,9 +26,6 @@ export default {
     iconPosition: {
       type: String,
       default: 'left',
-      // validator(value) {
-      //   return ['left', 'right'].indexOf(value) >= 0;
-      // },
     },
     loading: {
       type: Boolean,

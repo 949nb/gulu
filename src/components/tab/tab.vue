@@ -26,10 +26,8 @@ export default {
     };
   },
   mounted() {
-    console.log(this.selected);
     const a = this.selected;
     this.eventBus.$emit('update:selected', a);
-    console.log(1);
   },
 };
 </script>
